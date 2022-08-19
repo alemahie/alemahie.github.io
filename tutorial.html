@@ -48,6 +48,66 @@
   <div class="section" id="mne-vision-tutorial">
 <h1>MNE Vision Tutorial<a class="headerlink" href="#mne-vision-tutorial" title="Permalink to this headline">¶</a></h1>
 <p>Welcome to MNE Vision !</p>
+<p>MNE Vision is a free and open-source software for processing and analysing EEG signals, based on the MNE python library.</p>
+<p>In this tutorial, we will show how to use MNE Vision in order to import data and do some processing.</p>
+<div class="section" id="importing-data">
+<h2>Importing data<a class="headerlink" href="#importing-data" title="Permalink to this headline">¶</a></h2>
+<p>In MNE Vision, data can be imported from 3 file formats:</p>
+<ol class="arabic simple">
+<li>FIF: Those are file formats used by MNE.</li>
+<li>ANT EEGO CNT: The CNT files provided when recording data with ANT EEGO headset.</li>
+<li>SET: The file format used by EEGLAB.</li>
+</ol>
+<img alt="image/importing_data.png" src="image/importing_data.png" />
+<p>Once the dataset is selected, you can modify multiple parameters.
+By default, all the parameters used are the ones found inside the dataset.</p>
+</div>
+<div class="section" id="seeing-the-imported-data">
+<h2>Seeing the imported data<a class="headerlink" href="#seeing-the-imported-data" title="Permalink to this headline">¶</a></h2>
+<p>Once the dataset is loaded, we can see all the information loaded by MNE Vision on the main window.</p>
+<p>All the information found inside the dataset will be showed there. MNE Vision will automatically detect if the dataset is a raw recording or if it is already epoched. It will also look for the events present in the dataset.</p>
+<img alt="_images/vision_file_data.PNG" src="_images/vision_file_data.PNG" />
+<p>From there, you can perform multiple computations on the dataset. You can check the dataset and edit various information such as the events or the channel positions.</p>
+<p>If you go in the “plots” menu, you can click on the “channel data” to see the EEG data displayed in a new window.</p>
+<img alt="image/vision_raw_data.PNG" src="image/vision_raw_data.PNG" />
+</div>
+<div class="section" id="tools-plots">
+<h2>Tools &amp; Plots<a class="headerlink" href="#tools-plots" title="Permalink to this headline">¶</a></h2>
+<p>There are various tools that can be applied on the dataset. There is the filtering, resampling, re-referencing and many more.</p>
+<p>They are all available in the “Tools” menu. Selecting one of the tools will open a new window asking for supplementary data before applying the chosen computation.</p>
+<div class="section" id="erp">
+<h3>ERP<a class="headerlink" href="#erp" title="Permalink to this headline">¶</a></h3>
+<p>The simplest analysis that you could do, is the ERPs computed with the average of the epochs. You can compute the ERPs for all the channels, as well as computing the ERP images for one channel with topographies associated to the ERP image.</p>
+<img alt="_images/vision_filtered_ica_erps.PNG" src="_images/vision_filtered_ica_erps.PNG" />
+</div>
+<div class="section" id="psd">
+<h3>PSD<a class="headerlink" href="#psd" title="Permalink to this headline">¶</a></h3>
+<p>Another plot that we can compute is the Power Spectral Density.</p>
+<img alt="_images/vision_filtered_ica_psd.PNG" src="_images/vision_filtered_ica_psd.PNG" />
+</div>
+</div>
+<div class="section" id="advanced-computations">
+<h2>Advanced computations<a class="headerlink" href="#advanced-computations" title="Permalink to this headline">¶</a></h2>
+<p>There are some advanced tools and plots in MNE Vision, such as the source estimation, the connectivity or the classification with machine learning.</p>
+<p>All those tools are pretty easy to use thanks to the graphical interface of the software. Just as for the other tools, MNE Vision will ask you some parameters before starting the computation and will output the results at the end. Those computations are more complex and will thus take more time than the simpler ones.</p>
+<div class="section" id="source-estimation">
+<h3>Source Estimation<a class="headerlink" href="#source-estimation" title="Permalink to this headline">¶</a></h3>
+<p>A complex computation is the source estimation that will estimate the origin of the signals.</p>
+<p>MNE Vision plots a 3D representation of the brain where the user can change the time at which the activity is shown. You can also choose some parameters before the computations such as on which epochs the estimation is done, the method, and more.</p>
+<p>EEGLAB outputs multiple figures showing the different slices of the brain and the activity plotted on them, as the figure ref{fig:comparison_eloreta_eeglab} shows. However, we have no control over the time or the epochs used for the computation. EEGLAB also only allows the computation to be done with the “eLORETA” method.</p>
+<img alt="_images/vision_eloreta.PNG" src="_images/vision_eloreta.PNG" />
+</div>
+<div class="section" id="classification-with-machine-learning">
+<h3>Classification with machine learning<a class="headerlink" href="#classification-with-machine-learning" title="Permalink to this headline">¶</a></h3>
+<p>MNE Vision uses a variety of pipelines for performing the classification and will classify the epochs in function of their events. It outputs two figures, the confusion matrix containing the results of each pipeline. And also the ROC curves and AUC scores of each pipeline. This classification shows to the user if it is possible to distinguish the different events based on the brain activity.</p>
+<img alt="_images/vision_classification.PNG" src="_images/vision_classification.PNG" />
+<img alt="_images/vision_classification_auc.PNG" src="_images/vision_classification_auc.PNG" />
+</div>
+</div>
+<div class="section" id="more">
+<h2>More<a class="headerlink" href="#more" title="Permalink to this headline">¶</a></h2>
+<p>MNE Vision can perform various computations, do not hesitate to try them !</p>
+</div>
 </div>
 
 
@@ -56,6 +116,26 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">MNE Vision Tutorial</a><ul>
+<li><a class="reference internal" href="#importing-data">Importing data</a></li>
+<li><a class="reference internal" href="#seeing-the-imported-data">Seeing the imported data</a></li>
+<li><a class="reference internal" href="#tools-plots">Tools &amp; Plots</a><ul>
+<li><a class="reference internal" href="#erp">ERP</a></li>
+<li><a class="reference internal" href="#psd">PSD</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#advanced-computations">Advanced computations</a><ul>
+<li><a class="reference internal" href="#source-estimation">Source Estimation</a></li>
+<li><a class="reference internal" href="#classification-with-machine-learning">Classification with machine learning</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#more">More</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="readme.html"
                         title="previous chapter">MNE_Vision</a></p>

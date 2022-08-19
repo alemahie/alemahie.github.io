@@ -48,20 +48,32 @@
   <p><img alt="MNE_Vision" src="_images/mne_vision_logo.png" /></p>
 <div class="section" id="mne-vision">
 <h1>MNE_Vision<a class="headerlink" href="#mne-vision" title="Permalink to this headline">¶</a></h1>
-<p>MNE Vision is a open source software mainly based on <a class="reference external" href="https://mne.tools/stable/index.html">MNE_Python</a> We propose here a graphical interface for MNE, able to perform some of the most common tasks in EEG analysis and processing and available in MNE, while also proposing other tools.</p>
+<p>MNE Vision is a free and open source software based on <a class="reference external" href="https://mne.tools/stable/index.html">MNE_Python</a>.
+We propose here a graphical interface for MNE, able to perform some of the most common tasks in EEG analysis and processing.
+While also proposing other tools such as the connectivity, and classification with machine learning.</p>
 <p>The main objective is to propose a free alternative to <a class="reference external" href="https://sccn.ucsd.edu/eeglab/index.php">EEGLAB</a> which requires a <a class="reference external" href="https://fr.mathworks.com/products/matlab.html">MATLAB</a> license to fully work.</p>
 <div class="section" id="documentation">
 <h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="docs/build/html/index.html">MNE_Vision documentation</a> is available inside the project files on this github.</p>
+<p>MNE_Vision documentation is available <a class="reference external" href="https://alemahie.github.io/">here</a>.</p>
 </div>
 <div class="section" id="installing-and-using-mne-vision">
 <h2>Installing and using MNE_Vision<a class="headerlink" href="#installing-and-using-mne-vision" title="Permalink to this headline">¶</a></h2>
-<p>To use MNE_Vision, you will first need to install his dependencies.
+<p>There are two ways to install MNE Vision.</p>
+<p>First, you can download it by doing in a terminal :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install mne_vision
+</pre></div>
+</div>
+<p>This requires Python to be installed, if you don’t have python installed you can download it from <a class="reference external" href="https://www.python.org/downloads/">here</a>.</p>
+<p>Once MNE Vision is downloaded, you can launch it from a terminal by doing :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mne_vision
+</pre></div>
+</div>
+<p>The second way to download MNE Vision is through the GitHub page (<a class="reference external" href="https://github.com/alemahie/MNE_Vision">here</a>.).</p>
+<p>You will first need to install his dependencies.
 To do so you can you can open a terminal in the directory where MNE_Vision is stored and type :</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install requirements.txt
 </pre></div>
 </div>
-<p>This requires Python to be installed, if you don’t have python installed you can download it from <a class="reference external" href="https://www.python.org/downloads/">here</a>.</p>
 <p>Then, MNE Vision can be launch in a terminal from the directory “pathtoMNE_VISION” and type :</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 src/main.py
 </pre></div>
@@ -73,22 +85,22 @@ To do so you can you can open a terminal in the directory where MNE_Vision is st
 <p>The required dependencies to run MNE-Python are:</p>
 <ul class="simple">
 <li>Python &gt;= 3.9.13</li>
-<li>eeglabio &gt;= 0.0.1.post7</li>
-<li>keras &gt;= 2.9.0</li>
-<li>matplotlib &gt;= 3.5.2</li>
+<li>eeglabio</li>
+<li>keras</li>
+<li>matplotlib</li>
 <li>mne &gt;= 1.0.3</li>
 <li>mne_connectivity &gt;= 0.3</li>
-<li>numpy &gt;= 1.22.4</li>
-<li>pymatreader &gt;= 0.0.30</li>
-<li>PyQt5 &gt;= 5.15.6</li>
-<li>PyQt5-stubs &gt;= 5.15.6.0</li>
-<li>pyriemann &gt;= 0.2.7</li>
-<li>pyvista &gt;= 0.34.1</li>
-<li>pyvistaqt &gt;= 0.9.0</li>
-<li>scikit_learn &gt;= 1.1.1</li>
-<li>scipy &gt;= 1.8.1</li>
-<li>seaborn &gt;= 0.11.2</li>
-<li>tensorflow &gt;= 2.9.1</li>
+<li>numpy</li>
+<li>pymatreader</li>
+<li>PyQt5</li>
+<li>PyQt5-stubs</li>
+<li>pyriemann</li>
+<li>pyvista</li>
+<li>pyvistaqt</li>
+<li>scikit_learn</li>
+<li>scipy</li>
+<li>seaborn</li>
+<li>tensorflow</li>
 </ul>
 </div>
 <div class="section" id="licensing">
